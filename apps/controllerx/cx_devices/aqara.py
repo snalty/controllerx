@@ -550,3 +550,13 @@ class ZNXNKG02LMMediaPlayerController(MediaPlayerController):
             "start_rotating": MediaPlayer.VOLUME_FROM_CONTROLLER_ANGLE,
             "stop_rotating": MediaPlayer.RELEASE,
         }
+
+class QBKG04LMLightController(LightController):
+    def get_z2m_actions_mapping(self) -> DefaultActionsMapping:
+        return {
+            "single": Light.TOGGLE,
+            "hold": Light.HOLD_BRIGHTNESS_DOWN,
+            "hold_release": Light.RELEASE,
+            "double": Light.ON_FULL_BRIGHTNESS
+        }
+
